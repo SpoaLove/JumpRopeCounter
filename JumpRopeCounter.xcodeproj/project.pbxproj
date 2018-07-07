@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					CB43B7B320EFB1A0003AB710 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					CB43B7C720EFB1A2003AB710 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -430,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = JumpRopeCounter/Info.plist;
@@ -439,6 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = spoalove.JumpRopeCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = JumpRopeCounter/Info.plist;

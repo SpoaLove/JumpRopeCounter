@@ -7,19 +7,39 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    private var count: Int = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    private var userDuringTraining: Bool = false
+    
+    @IBOutlet weak var countLabel: UILabel!
+    
+    @IBAction func startButtonDidPressed(_ sender: UIButton) {
+        let title = userDuringTraining ? "Start" : "End"
+        sender.setTitle(title, for: UIControlState.normal)
+        userDuringTraining = !userDuringTraining
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func resetButtonDidPressed(_ sender: UIButton) {
+        startButton.setTitle("Start", for: UIControlState.normal)
+        userDuringTraining = false
+        count = 0
+        countLabel.text = "\(count)"
     }
-
-
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            if userDuringTraining {
+                count += 1
+                countLabel.text = "\(count)"
+            }
+        }
+    }
 }
 
